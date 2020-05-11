@@ -8,6 +8,11 @@
     background-color:#3E007C;
     color: white;
 }
-.active {
-    color: white;
+.theiaStickySidebar {
+    padding-top: 0px;
+    padding-bottom: 1px;
+    position: static;
+    transform: none;
+    top: 0px;
+    left: 30px;
 }
