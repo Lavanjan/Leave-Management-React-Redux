@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
+
 import './../assets/css/Style.css';
 import logo from './../assets/images/logo-sgic.png';
 import profile from'./../assets/images/manager.png';
@@ -71,15 +73,15 @@ class Navbar extends Component {
                       <div className="append mr-auto my-0 my-md-0 mr-auto">
                         <ul className="list-group list-group-horizontal-md mr-auto">
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          <li className="mr-1 current"><a href="/" className="btn-ctm-space btn-dec"><span className="lnr lnr-home pr-0 pr-lg-2" /><span className="d-none d-lg-inline">My Leave</span></a></li>
+                          <li className="mr-1 current"><NavLink exact to = "/" activeClassName = "main-nav-active" className="btn-ctm-space btn-dec"><span className="lnr lnr-home pr-0 pr-lg-2" /><span className="d-none d-lg-inline">My Leave</span></NavLink></li>
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          <li className="mr-1"><a className="btn-ctm-space btn-dec " href="/Profile_details"><span className="lnr lnr-apartment pr-0 pr-lg-2" /><span className="d-none d-lg-inline">My Profile</span></a></li>
+                          <li className="mr-1"><NavLink exact to = "/my-profile" activeClassName = "main-nav-active" className="btn-ctm-space btn-dec "><span className="lnr lnr-apartment pr-0 pr-lg-2" /><span className="d-none d-lg-inline">My Profile</span></NavLink></li>
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          <li className="mr-1"><a className="btn-ctm-space btn-dec " href="/leave_process"><span className="lnr lnr-apartment pr-0 pr-lg-2" /><span className="d-none d-lg-inline">Manage Leave</span></a></li>
+                          <li className="mr-1"><NavLink exact to = "/manage-leave" activeClassName = "main-nav-active" className="btn-ctm-space btn-dec"><span className="lnr lnr-apartment pr-0 pr-lg-2" /><span className="d-none d-lg-inline">Manage Leave</span></NavLink></li>
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          <li className="mr-1"><a className="btn-ctm-space btn-dec " href="/manage_employee"><span className="lnr lnr-apartment pr-0 pr-lg-2" /><span className="d-none d-lg-inline">Manage Employee</span></a></li>
+                          <li className="mr-1"><NavLink exact to ="/manage-employee" activeClassName = "main-nav-active" className="btn-ctm-space btn-dec "><span className="lnr lnr-apartment pr-0 pr-lg-2" /><span className="d-none d-lg-inline">Manage Employee</span></NavLink></li>
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          <li className="mr-1"><a className="btn-ctm-space btn-dec" href="/settings"><span className="lnr lnr-briefcase pr-0 pr-lg-2" /><span className="d-none d-lg-inline">Configuration</span></a></li>
+                          <li className="mr-1"><NavLink exact to = "/configuration" activeClassName = "main-nav-active" className="btn-ctm-space btn-dec"><span className="lnr lnr-briefcase pr-0 pr-lg-2" /><span className="d-none d-lg-inline">Configuration</span></NavLink></li>
                         </ul>
                       </div>
                     </div>

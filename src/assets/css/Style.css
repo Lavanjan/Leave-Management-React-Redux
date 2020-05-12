@@ -8,11 +8,15 @@
     background-color:#3E007C;
     color: white;
 }
-.theiaStickySidebar {
-    padding-top: 0px;
-    padding-bottom: 1px;
-    position: static;
-    transform: none;
-    top: 0px;
-    left: 30px;
+.sidebar {
+    position: sticky;
+    top: 0;
+    box-sizing: border-box;
+}
+@media screen and (max-height: 450px) {
+    .sidebar { padding-top: 20px; }
+}
+.main-nav-active {
+    color:white;
+    background-color: #3E007C;
 }
