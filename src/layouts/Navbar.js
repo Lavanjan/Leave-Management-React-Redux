@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import { connect } from "react-redux";
+import {
+  MY_LEAVE_NAVIGATION, MY_PROFILE_NAVIGATION, MANAGE_LEAVE_NAVIGATION, MANAGE_EMPLOYEE_NAVIGATION,
+  CONFIGURATION_NAVIGATION
+    } from "../redux/action/headerNavigation/HeaderNavigation";
 
 import './../assets/css/Style.css';
 import logo from './../assets/images/logo-sgic.png';
-import profile from'./../assets/images/manager.png';
+import profile from './../assets/images/manager.png';
 
-class Navbar extends Component {
+
+ class Navbar extends Component {
     render() {
         return (
             <header className="header">
@@ -73,9 +79,9 @@ class Navbar extends Component {
                       <div className="append mr-auto my-0 my-md-0 mr-auto">
                         <ul className="list-group list-group-horizontal-md mr-auto">
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          <li className="mr-1 current"><NavLink exact to = "/" activeClassName = "main-nav-active" className="btn-ctm-space btn-dec"><span className="lnr lnr-home pr-0 pr-lg-2" /><span className="d-none d-lg-inline">My Leave</span></NavLink></li>
+                          <li className="mr-1 current"><NavLink onClick={this.props.changeMyLeavePath} exact to = "/" activeClassName = "main-nav-active" className="btn-ctm-space btn-dec"><span className="lnr lnr-home pr-0 pr-lg-2" /><span className="d-none d-lg-inline">My Leave</span></NavLink></li>
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          <li className="mr-1"><NavLink exact to = "/my-profile" activeClassName = "main-nav-active" className="btn-ctm-space btn-dec "><span className="lnr lnr-apartment pr-0 pr-lg-2" /><span className="d-none d-lg-inline">My Profile</span></NavLink></li>
+                          <li className="mr-1"><NavLink onClick={this.props.changeMyProfilePath} exact to = "/my-profile" activeClassName = "main-nav-active" className="btn-ctm-space btn-dec "><span className="lnr lnr-apartment pr-0 pr-lg-2" /><span className="d-none d-lg-inline">My Profile</span></NavLink></li>
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           <li className="mr-1"><NavLink exact to = "/manage-leave" activeClassName = "main-nav-active" className="btn-ctm-space btn-dec"><span className="lnr lnr-apartment pr-0 pr-lg-2" /><span className="d-none d-lg-inline">Manage Leave</span></NavLink></li>
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -94,4 +100,30 @@ class Navbar extends Component {
     }
 }
 
-export default Navbar
+const mapStateToProps = (state) => {
+  return {
+    path:state.HeaderNavigationReducer.path
+  }
+  
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    changeMyLeavePath: () => {
+      dispatch({
+        type:MY_LEAVE_NAVIGATION
+      })
+      console.log("hit my leave")
+    },
+    changeMyProfilePath: () => {
+      dispatch({
+        type:MY_PROFILE_NAVIGATION
+      })
+      console.log("hit my profile")
+  },
+}
+
+  
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Navbar)

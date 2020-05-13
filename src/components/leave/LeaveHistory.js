@@ -4,25 +4,7 @@ class LeaveHistory extends Component {
     render() {
         return (
             <Fragment>
-                <p className="mt-5">Hello I am From Leave History</p>
-                <p className="mt-5">Hello I am From Leave History</p>
-                <p className="mt-5">Hello I am From Leave History</p>
-                <p className="mt-5">Hello I am From Leave History</p>
-                <p className="mt-5">Hello I am From Leave History</p>
-                <p className="mt-5">Hello I am From Leave History</p>
-                <p className="mt-5">Hello I am From Leave History</p>
-                <p className="mt-5">Hello I am From Leave History</p>
-                <p className="mt-5">Hello I am From Leave History</p>
-                <p className="mt-5">Hello I am From Leave History</p>
-                <p className="mt-5">Hello I am From Leave History</p>
-                <p className="mt-5">Hello I am From Leave History</p>
-                <p className="mt-5">Hello I am From Leave History</p>
-                <p className="mt-5">Hello I am From Leave History</p>
-                <p className="mt-5">Hello I am From Leave History</p>
-                <p className="mt-5">Hello I am From Leave History</p>
-               
-                
-
+              
             </Fragment>
 
         )

@@ -1,6 +1,7 @@
-import React, { Fragment } from 'react';
+import React, { Fragment ,useEffect,useState} from 'react';
 import { Switch } from 'react-router-dom';
 import './../App.css';
+import History from "../components/constant/History"
 
 // Import Layouts
 import Navbar from './../layouts/Navbar';
@@ -14,6 +15,9 @@ import Body from './body/Body';
 // End of Body Component
 
 function App() {
+  useEffect(() => { console.log(History.location) })
+  
+ 
   return (
     <div class="inner-wrapper">
       <Navbar />
