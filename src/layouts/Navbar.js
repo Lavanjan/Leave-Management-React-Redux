@@ -77,17 +77,12 @@ import profile from './../assets/images/manager.png';
                   <div className="col-12">
                     <div className="header-menu-list d-flex bg-white rt_nav_header horizontal-layout nav-bottom">
                       <div className="append mr-auto my-0 my-md-0 mr-auto">
-                        <ul className="list-group list-group-horizontal-md mr-auto">
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <ul className="nav_links list-group list-group-horizontal-md mr-auto">
                           <li className="mr-1 current"><NavLink onClick={this.props.changeMyLeavePath} exact to = "/" activeClassName = "main-nav-active" className="btn-ctm-space btn-dec"><span className="lnr lnr-home pr-0 pr-lg-2" /><span className="d-none d-lg-inline">My Leave</span></NavLink></li>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          <li className="mr-1"><NavLink onClick={this.props.changeMyProfilePath} exact to = "/my-profile" activeClassName = "main-nav-active" className="btn-ctm-space btn-dec "><span className="lnr lnr-apartment pr-0 pr-lg-2" /><span className="d-none d-lg-inline">My Profile</span></NavLink></li>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          <li className="mr-1"><NavLink exact to = "/manage-leave" activeClassName = "main-nav-active" className="btn-ctm-space btn-dec"><span className="lnr lnr-apartment pr-0 pr-lg-2" /><span className="d-none d-lg-inline">Manage Leave</span></NavLink></li>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          <li className="mr-1"><NavLink exact to ="/manage-employee" activeClassName = "main-nav-active" className="btn-ctm-space btn-dec "><span className="lnr lnr-apartment pr-0 pr-lg-2" /><span className="d-none d-lg-inline">Manage Employee</span></NavLink></li>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          <li className="mr-1"><NavLink exact to = "/configuration" activeClassName = "main-nav-active" className="btn-ctm-space btn-dec"><span className="lnr lnr-briefcase pr-0 pr-lg-2" /><span className="d-none d-lg-inline">Configuration</span></NavLink></li>
+                          <li className="mr-1"><NavLink onClick={ this.props.changeMyProfilePath } exact to = "/my-profile" activeClassName = "main-nav-active" className="btn-ctm-space btn-dec "><span className="lnr lnr-apartment pr-0 pr-lg-2" /><span className="d-none d-lg-inline">My Profile</span></NavLink></li>
+                          <li className="mr-1"><NavLink onClick = { this.props.changeManageLeavePath } exact to = "/manage-leave" activeClassName = "main-nav-active" className="btn-ctm-space btn-dec"><span className="lnr lnr-apartment pr-0 pr-lg-2" /><span className="d-none d-lg-inline">Manage Leave</span></NavLink></li>
+                          <li className="mr-1"><NavLink onClick = { this.props.changeManageEmployeePath } exact to ="/manage-employee" activeClassName = "main-nav-active" className="btn-ctm-space btn-dec "><span className="lnr lnr-apartment pr-0 pr-lg-2" /><span className="d-none d-lg-inline">Manage Employee</span></NavLink></li>
+                          <li className="mr-1"><NavLink onClick = { this.props.changeConfigurationPath } exact to = "/configuration" activeClassName = "main-nav-active" className="btn-ctm-space btn-dec"><span className="lnr lnr-briefcase pr-0 pr-lg-2" /><span className="d-none d-lg-inline">Configuration</span></NavLink></li>
                         </ul>
                       </div>
                     </div>
@@ -120,7 +115,23 @@ const mapDispatchToProps = (dispatch) => {
         type:MY_PROFILE_NAVIGATION
       })
       console.log("hit my profile")
-  },
+    },
+    changeManageLeavePath: () => {
+      dispatch({
+        type:MANAGE_LEAVE_NAVIGATION
+      })
+      console.log("hit manage leave")
+    },
+    changeManageEmployeePath: () => {
+      dispatch({
+        type: MANAGE_EMPLOYEE_NAVIGATION
+      })
+    },
+    changeConfigurationPath: () => {
+      dispatch({
+        type:CONFIGURATION_NAVIGATION
+      })
+    }
 }
 
   

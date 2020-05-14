@@ -3,7 +3,7 @@ import React, { Component, Fragment } from 'react'
 // import History from "../constant/History"
 
 import LeaveSummary from '../leaveSummary/LeaveSummary';
-import LeaveApplyForm from '../leaveApplyForm/LeaveApplyForm';
+import LeaveApplyForm from '../forms/LeaveApplyForm';
 
 class ApplyLeave extends Component {
     render() {
@@ -12,9 +12,7 @@ class ApplyLeave extends Component {
                 <div className="row">
                     <div className="col-md-12">
                         <LeaveSummary />
-                        <div className="row">
-                            
-                        </div>
+                       <LeaveApplyForm />
                     </div>
                 </div>
             </Fragment>

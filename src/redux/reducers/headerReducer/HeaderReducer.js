@@ -1,4 +1,7 @@
-import { MY_LEAVE_NAVIGATION, MANAGE_LEAVE_NAVIGATION, MANAGE_EMPLOYEE_NAVIGATION, MY_PROFILE_NAVIGATION, CONFIGURATION_NAVIGATION } from "../../action/headerNavigation/HeaderNavigation";
+import {
+    MY_LEAVE_NAVIGATION, MANAGE_LEAVE_NAVIGATION, MANAGE_EMPLOYEE_NAVIGATION, MY_PROFILE_NAVIGATION,
+    CONFIGURATION_NAVIGATION
+} from "../../action/headerNavigation/HeaderNavigation";
 
 const initState = {
     path:"/myleave"

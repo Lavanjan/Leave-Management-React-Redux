@@ -1,4 +1,8 @@
-import * as HeaderNavigation from "./headerNavigation/HeaderNavigation"
+import * as HeaderNavigation from "./headerNavigation/HeaderNavigation";
+import SiderNavigation from "./siderNavigation/SiderNavigation";
+
 export default {
-    HeaderNavigation
+    HeaderNavigation,
+    SiderNavigation
 }
+

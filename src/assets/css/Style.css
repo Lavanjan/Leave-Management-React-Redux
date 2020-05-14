@@ -20,3 +20,10 @@
     color:white;
     background-color: #3E007C;
 }
+.nav_links {
+    list-style: none;
+}
+.nav_links li {
+    padding: 0px 40px 0px 70px;
+    display: inline-block;
+}

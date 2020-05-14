@@ -1,0 +1,14 @@
+export const APPLY_LEAVE = "APPLY_LEAVE";
+export const LEAVE_HISTORY = "LEAVE_HISTORY";
+
+export const PROFILE = "PROFILE";
+export const SETTING = "SETTING";
+
+export const MANAGE_LEAVE = "MANAGE_LEAVE";
+export const LEAVE_ALLOCATION = "LEAVE_ALLOCATION";
+
+export const MANAGE_EMPLOYEE = "MANAGE_EMPLOYEE";
+export const MANAGE_DEPARTMENT = "MANAGE_DEPARTMENT";
+
+export const SYSTEM_SETTING = "SYSTEM_SETTING";
+export const CALENDAR = "CALENDAR";
