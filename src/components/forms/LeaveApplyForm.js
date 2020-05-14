@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 export class LeaveApplyForm extends Component {
     render() {
         return (
-            <div className="row">
                 <div class="col-8">
                     <div className="card ctm-border-radius shadow-sm">
                         <div className="card-header">
@@ -89,7 +88,6 @@ export class LeaveApplyForm extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
         )
     }
 }
