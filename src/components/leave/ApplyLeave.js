@@ -5,6 +5,7 @@ import 'react-calendar/dist/Calendar.css';
 import LeaveSummary from '../leaveSummary/LeaveSummary';
 import LeaveApplyForm from '../forms/LeaveApplyForm';
 import EventPanel from '../eventPanel/EventPanel';
+import NotificationPanel from '../notificationPanel/NotificationPanel';
 
 class ApplyLeave extends Component {
     state = {
@@ -17,6 +18,9 @@ class ApplyLeave extends Component {
                 <div className="row">
                     <div className="col-md-12">
                         <LeaveSummary />
+                        <NotificationPanel
+                            message="Your request has been accepted."
+                        />
                         <div className="row">
                             <LeaveApplyForm />
                             <div class="col-xl-4 col-lg-12 col-md-12">
@@ -29,8 +33,8 @@ class ApplyLeave extends Component {
                                     </div>
                                     <EventPanel
                                         mgs1="No events happening"
-                                        mgs2 = "during this period"
-                                        submgs = "Public Holidays, shifts etc. Will be shown here"
+                                        mgs2="during this period"
+                                        submgs="Public Holidays, shifts etc. Will be shown here"
                                     />
                                 </div>
                             </div>
@@ -38,7 +42,6 @@ class ApplyLeave extends Component {
                     </div>
                 </div>
             </Fragment>
-
         )
     }
 }
