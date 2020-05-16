@@ -7,6 +7,8 @@ import LeaveApplyForm from '../forms/LeaveApplyForm';
 import EventPanel from '../eventPanel/EventPanel';
 import NotificationPanel from '../notificationPanel/NotificationPanel';
 
+import ReactForm from '../forms/ReactForm';
+
 class ApplyLeave extends Component {
     state = {
         date: new Date(),
@@ -22,7 +24,8 @@ class ApplyLeave extends Component {
                             message="Your request has been accepted."
                         />
                         <div className="row">
-                            <LeaveApplyForm />
+                            {/* <LeaveApplyForm /> */}
+                                <ReactForm />
                             <div class="col-xl-4 col-lg-12 col-md-12">
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-6 col-md-6 d-flex">

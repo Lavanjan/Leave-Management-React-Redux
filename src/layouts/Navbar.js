@@ -108,13 +108,13 @@ const mapDispatchToProps = (dispatch) => {
       dispatch({
         type:MY_LEAVE_NAVIGATION
       })
-      console.log("hit my leave")
+      // console.log("hit my leave")
     },
     changeMyProfilePath: () => {
       dispatch({
         type:MY_PROFILE_NAVIGATION
       })
-      console.log("hit my profile")
+      // console.log("hit my profile")
     },
     changeManageLeavePath: () => {
       dispatch({

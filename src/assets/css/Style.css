@@ -27,3 +27,8 @@
     padding: 0px 40px 0px 70px;
     display: inline-block;
 }
+.CalendarDay__selected_span {
+    background: #3E007C; 
+    color: white;
+    border: 1px solid light-red;
+  }

@@ -2,7 +2,14 @@ import React, { Component, Fragment } from "react";
 
 import Table from "../table/Table";
 
-const col = [{title:"Date",dataIndex:"date",width:"400px"},{title:"LeaveType",dataIndex: "leavetype"}, {title:"From",dataIndex:"from"}, {title:"To",dataIndex:"to"}, {title:"Status",dataIndex:"status",render:<button>hello</button>},{title:"Action",dataIndex: "action",render:<button>hi</button>}];
+const col = [
+  { title: "Date", dataIndex: "date", width: "150px" },
+  { title: "LeaveType", dataIndex: "leavetype", width: "200px" },
+  { title: "From", dataIndex: "from", width: "150px" },
+  { title: "To", dataIndex: "to", width: "150px" },
+  { title: "Status", dataIndex: "status", render: <button>hello</button>, width: "150px" },
+  { title: "Action", dataIndex: "action", render: <button>hi</button>, width: "150px" },
+];
 
 const row = [
   {
@@ -10,25 +17,20 @@ const row = [
     leavetype: "Casual Leave",
     from: "2020.04.01",
     to: "2020.04.03",
-
   },
   {
     date: "2020.04.15",
     leavetype: "Casual Leave",
     from: "2020.04.01",
     to: "2020.04.03",
-   
-    },
-    {
-        date: "2020.04.15",
-        leavetype: "Casual Leave",
-        from: "2020.04.01",
-        to: "2020.04.03",
-       
-      
-      },
+  },
+  {
+    date: "2020.04.15",
+    leavetype: "Casual Leave",
+    from: "2020.04.01",
+    to: "2020.04.03",
+  },
 ];
-
 
 class LeaveHistory extends Component {
   render() {
@@ -86,12 +88,13 @@ class LeaveHistory extends Component {
                           <div
                             className="tab-pane py-0 active"
                             id="tabs-1"
-                            role="tabpanel">
+                            role="tabpanel"
+                          >
                             <div>
-                                                        <Table
-                                                            coloumn={col}
-                                                            tableData={row}
-                                                        />
+                              <Table
+                                coloumn={col}
+                                tableData={row}
+                              />
                             </div>
                           </div>
                         </div>
