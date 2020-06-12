@@ -64,7 +64,7 @@ export class Table extends Component {
         <div className="tab-pane py-0" id="tabs-2" role="tabpanel">
           <div className="table-responsive table-hover"></div>
         </div>
-        <div classname="row">
+        {/* <div classname="row">
           <div classname="col-4">
             <span classname="ml-4 font-italic">
               Showing 1 to 10 of 35 entries
@@ -101,7 +101,7 @@ export class Table extends Component {
               </ul>
             </nav>
           </div>
-        </div>
+        </div> */}
       </Fragment>
     );
   }

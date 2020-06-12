@@ -7,8 +7,8 @@ const col = [
   { title: "LeaveType", dataIndex: "leavetype", width: "200px" },
   { title: "From", dataIndex: "from", width: "150px" },
   { title: "To", dataIndex: "to", width: "150px" },
-  { title: "Status", dataIndex: "status", render: <button>hello</button>, width: "150px" },
-  { title: "Action", dataIndex: "action", render: <button>hi</button>, width: "150px" },
+  { title: "Status", dataIndex: "status", render: <button className = "btn btn-primary">Accepted</button>, width: "150px" },
+  { title: "Action", dataIndex: "action", render: <button className = "btn btn-primary">View</button>, width: "150px" },
 ];
 
 const row = [

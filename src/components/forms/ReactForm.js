@@ -3,11 +3,11 @@ import DatePicker from "../calendar/datePicker";
 
 export class ReactForm extends Component {
   state = {
-    LeaveType: "",
-    lastName: "",
-    userName: "",
-    email: "",
-    password: "",
+    leaveType: "",
+    startDate: "",
+    endDate: "",
+    reason: "",
+    days: "",
   };
 
   handleChange = (e) => {
@@ -58,9 +58,7 @@ export class ReactForm extends Component {
 
       <div class="col-8">
         <div className="card ctm-border-radius shadow-sm">
-          <div className="card-header">
-            <h4 className="card-title mb-0">Apply Leaves</h4>
-          </div>
+          <span className="card-header card-head mb-0">Apply Leaves</span>
           <div className="card-body">
             <form>
               <div className="row">
@@ -71,9 +69,9 @@ export class ReactForm extends Component {
                       <span className="text-danger">*</span>
                     </label>
                     <select
-                      name = "LeaveType"
+                      name="leaveType"
                       className="form-control select"
-                      value={this.state.LeaveType}
+                      value={this.state.leaveType}
                       onChange={this.handleChange}
                     >
                       <option>Select Leave</option>
@@ -85,15 +83,19 @@ export class ReactForm extends Component {
                   </div>
                 </div>
 
-                <div className="ml-4 ml-5 ml-5 col-sm-5 leave-col">
-                  <div className="form-group">
-                    <label>Remaining Leaves</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="0 Days"
-                      disabled
-                    />
+                <div className="ml-4 ml-5 ml-5 col-sm-4 justify-content-end align-rl">
+                  <div className="container-fluid">
+                    <div className="span2">
+                      <div className="form-group">
+                        <label>Remaining Leaves</label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          placeholder="0 Days"
+                          disabled
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -104,67 +106,61 @@ export class ReactForm extends Component {
                     <DatePicker />
                   </div>
                 </div>
-                <div className="col-sm-6 leave-col">
-                  <div className="form-group">
-                    <label>To</label>
-                    <input
-                      type="text"
-                      className="form-control datetimepicker"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-sm-6 leave-col">
-                  <div className="form-group">
-                    <label>Doctor Certificate </label>&nbsp;&nbsp;
-                    <input type="radio" id="male" name="gender" value="male" />
-                    &nbsp;
-                    <label for="male">Yes</label>&nbsp;&nbsp;
-                    <input type="radio" id="male" name="gender" value="male" />
-                    &nbsp;
-                    <label for="male">No</label>
-                  </div>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-sm-6 leave-col">
-                  <div className="input-group">
-                    <div className="custom-file">
-                      {/* <input
-                        type="file"
-                        className="custom-file-input"
-                        id="inputGroupFile01"
-                        aria-describedby="inputGroupFileAddon01"
-                      />
-                      <label
-                        className="custom-file-label"
-                        for="inputGroupFile01"
-                      >
-                        Choose file
-                      </label> */}
+                <div className="ml-4 ml-5 ml-5 col-sm-4 align-rl">
+                  <div className="container-fluid">
+                    <div className="span2">
+                      <div className="form-group">
+                        <label>Taken Days</label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          placeholder="0 Days"
+                          disabled
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <br />
-              <div className="row">
+              <div className="row align-items-end">
                 <div className="col-sm-8">
                   <div className="form-group mb-0">
                     <label>Reason</label>
-                    <textarea className="form-control" rows="4" />
+                    <textarea
+                      className="form-control"
+                      rows="4"
+                      name="reason"
+                      placeholder="Include comments for your approver"
+                      value={this.state.reason}
+                      onChange={this.handleChange}
+                    />
                   </div>
                 </div>
-                <div className="col-sm-4 send-req">
-                  {/* <a
-            href=""
-            className=" mt-5 btn btn-theme send-btn btn-primary ctm-border-radius mt-3 ml-4"
-          > */}
-                  <button onClick={(e) => this.onSubmit(e)}>Submit</button>
-                  {/* </a> */}
-                  <span className="clear-center">Clear Form</span>
+                <div className="col-sm-4">
+                <div className="container-fluid">
+                    <div className="span2">
+                      <div className="form-group">
+                        <button
+                          onClick={(e) => this.onSubmit(e)}
+                          className="btn sub-btn"
+                        >
+                          Send Request
+                        </button>
+                      </div>
+                    </div>
+                    </div>
                 </div>
               </div>
+
+              <div className="row justify-content-center mt-3">
+
+              </div>
+              {/* <div className="row">
+                <div className="col-sm-4 send-req">
+                  <button onClick={(e) => this.onSubmit(e)}>Submit</button>
+                  <span className="clear-center">Clear Form</span>
+                </div>
+              </div> */}
             </form>
           </div>
         </div>
